@@ -15,13 +15,20 @@ Route::get('/', function () {
     return view('umum/welcome');
 });
 
+Route::group(['prefix' => 'menumakanan'], function(){
+    Route::get('/', 'Master\productController@index')->name('menumakanan');
+
+});
 Auth::routes();
 
 
+Route::get('/cariproduk', 'Master\productController@cariproduk')->name('cariproduk');
+
+
 //Login
-Route::get('/login','AuthController@login')->name('login');
-Route::post('/postlogin','AuthController@postlogin');
-Route::get('/logout','AuthController@logout')->name('logout');
+Route::get('/login','auth\LoginController@login')->name('login');
+Route::post('/postlogin','auth\LoginController@postlogin');
+Route::get('/logout','auth\LoginController@logout')->name('logout');
 
 Route::group(['middleware' => 'auth'],function(){
 
@@ -29,6 +36,7 @@ Route::group(['middleware' => 'auth'],function(){
 Route::get('/admin', function () {
     return view('/admin/menuawal');
 })->name('admin');
+
 
 Route::get('/produk', function () {
     return view('/admin/master/dataproduk');
@@ -41,6 +49,7 @@ Route::get('/user', function () {
 Route::get('/kategori', function () {
     return view('/admin/master/datakategori');
 })->name('kategori');
+
 
 
 

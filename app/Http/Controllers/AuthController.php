@@ -27,6 +27,6 @@ class AuthController extends Controller
 
     public function login()
     {
-        return view('umum.login');
+        return view('auth.login');
     }
 }

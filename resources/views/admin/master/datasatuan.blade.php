@@ -1,18 +1,14 @@
 @extends('admin.master')
 
 @section('judul')
-Data Kategori
+Data Satuan
 @endsection
 
 @section('content')
 
-
-<!-- Button to Open the Modal -->
-
-
 <div class="pt-4">
 
-    <button id="tambahModal" type="button" class="btn btn-primary pull-left" onclick="showTambahkategori()">
+    <button id="tambahModal" type="button" class="btn btn-primary pull-left" onclick="showTambahSatuan()">
         <span><i class="fa fa-plus-circle" aria-hidden="true"></i></span>
     </button>
 
@@ -23,51 +19,46 @@ Data Kategori
         <thead>
             <tr>
                 <th>#</th>
-                <th>ID Kategori</th>
-                <th>Nama Kategori</th>
+                <th>KD Satuan</th>
+                <th>Nama Satuan</th>
                 <th>Action</th>
             </tr>
         </thead>
     </table>
 </div>
 
-<!--Srart Modal -->
-<div class="modal fade" id="modalKategori">
-    <div class="modal-dialog">
+<div class="modal fade" id="modalSatuan">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h6 class="modal-title">Tambah Data Kategori</h6>
+                <h4 class="modal-title">Tambah Data Satuan</h4>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
 
-            <form action="" method="POST" id="formkategori" class="form">
+            <form action="" method="POST" id="formsatuan" class="form">
                 {{ csrf_field() }}
                 <div class="modal-body">
                     <div class="alert alert-danger" style="display:none"></div>
                     <div class="alert alert-success" style="display:none"></div>
-
-                    <input type="hidden" id="oldkdKategori" name="oldkdKategori">
+                    <input type="hidden" id="oldkdSatuan" name="oldkdSatuan">
                     <div class="form-group">
-                        <label>ID Kategori </label>
-                        <input type="text" class="form-control" placeholder="ID Kategori" id="kdKategori" name="kdKategori">
+                        <label>Kode Satuan </label>
+                        <input type="text" class="form-control" placeholder="Kode Satuan" id="kdSatuan" name="kdSatuan">
                     </div>
-
-
                     <div class="form-group">
-                        <label>Nama </label>
-                        <input type="text" class="form-control" placeholder="Nama Kategori" id="namaKategori" name="namaKategori">
+                        <label>Nama Satuan</label>
+                        <input type="text" class="form-control" placeholder="Nama Satuan" id="namaSatuan" name="namaSatuan">
                     </div>
 
                     <div class="text-right">
                         <button id="btnSimpan" class="btn btn-primary"><i id="iconbtn" class="fa fa-floppy-o" aria-hidden="true"></i>&nbsp;</button>
                     </div>
                 </div>
+
             </form>
         </div>
     </div>
 </div>
-<!-- EndModal -->
-
 @endsection
 
 @section('css')
@@ -79,5 +70,5 @@ Data Kategori
 <script src="{{ asset('/js/tampilan/fileinput.js') }}"></script>
 <script src="{{ asset('js/jquery.dataTables.min.js') }}"></script>
 <script src="{{ asset('js/dataTablesBootstrap4.js') }}"></script>
-<script src="{{ asset('/js/Master/kategori.js') }}"></script>
+<script src="{{ asset('/js/Master/satuan.js') }}"></script>
 @endsection
