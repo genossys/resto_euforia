@@ -71,9 +71,9 @@
         </div>
     </div>
     <!-- Control Sidebar -->
-    <aside class="control-sidebar control-sidebar-light">
+    <aside class="control-sidebar control-sidebar-light" >
         <!-- Control sidebar content goes here -->
-        <div class="p-5">
+        <div class="p-5" >
             <button class="btn btn-info" data-widget="control-sidebar"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>
             <button class="btn btn-danger pull-right" data-widget="control-sidebar"><i class="fa fa-trash" aria-hidden="true"></i></button>
             <h6 class="pt-5">Pesanan Anda</h6>

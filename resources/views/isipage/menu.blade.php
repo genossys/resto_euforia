@@ -10,7 +10,7 @@
                         <a> {{formatRupiah($men->hargaJual)}}</a>
                     </div>
                     <div class="text-right">
-                        <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#myModal">Detail</button>
+                        <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#myModal" onclick="tampilmodal('{{$men->kdProduct}}')" >Detail</button>
                     </div>
                 </div>
             </div>

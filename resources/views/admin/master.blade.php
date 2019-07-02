@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('/adminlte/css/adminlte.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('/css/bootstrap.min.css')}}">
+
     <!-- Genosstyle -->
     <link rel="stylesheet" href="{{ asset('/css/genosstyle.css')}}">
     <!-- bootstrap wysihtml5 - text editor -->
@@ -75,7 +77,7 @@
                 <!-- user panel -->
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                     <div class="image">
-                        <img src="{{asset ('/adminlte/img/avatar5.png')}}" class="img-circle elevation-2" alt="User Image">
+                        <!-- <img src="{{asset ('/adminlte/img/avatar5.png')}}" class="img-circle elevation-2" alt="User Image"> -->
                     </div>
                     <div class="info">
                         <a href="#" class="d-block">{{auth()->user()->user_id}}</a>
@@ -94,30 +96,42 @@
                                     <i class="right fa fa-angle-left"></i>
                                 </p>
                             </a>
+
                             <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="{{route ('kategori')}}" class="nav-link ">
-                                        <i class="fa fa-circle-o nav-icon"></i>
-                                        <p>Data Kategori</p>
-                                    </a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a href="{{route ('produk')}}" class="nav-link ">
-                                        <i class="fa fa-circle-o nav-icon"></i>
-                                        <p>Data Produk</p>
-                                    </a>
-                                </li>
-
-
                                 <li class="nav-item ">
-                                    <a href="{{route ('user')}}" class="nav-link">
+                                    <a href="{{ route('pageuser') }}" class="nav-link">
                                         <i class="fa fa-circle-o nav-icon"></i>
                                         <p>Data User</p>
                                     </a>
                                 </li>
+
+                                <li class="nav-item ">
+                                    <a href="{{ route('pagecustomer') }}" class="nav-link">
+                                        <i class="fa fa-circle-o nav-icon"></i>
+                                        <p>Data Customer</p>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="{{ route('pagesatuan') }}" class="nav-link ">
+                                        <i class="fa fa-circle-o nav-icon"></i>
+                                        <p>Data Satuan</p>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="{{route ('pagekategori')}}" class="nav-link ">
+                                        <i class="fa fa-circle-o nav-icon"></i>
+                                        <p>Data Kategori</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{ route('pageproduct') }}" class="nav-link ">
+                                        <i class="fa fa-circle-o nav-icon"></i>
+                                        <p>Data Produk</p>
+                                    </a>
+                                </li>
                             </ul>
-                        </li>
 
                         <li class="nav-item has-treeview ">
                             <a href="#" class="nav-link">
@@ -129,9 +143,16 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="" class="nav-link ">
+                                    <a href="{{route('kasir')}}" class="nav-link ">
                                         <i class="fa fa-circle-o nav-icon"></i>
-                                        <p>Order</p>
+                                        <p>Kasir</p>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="{{route('dapur')}}" class="nav-link ">
+                                        <i class="fa fa-circle-o nav-icon"></i>
+                                        <p>Dapur</p>
                                     </a>
                                 </li>
 
@@ -150,7 +171,7 @@
                                 <li class="nav-item">
                                     <a href="" class="nav-link ">
                                         <i class="fa fa-circle-o nav-icon"></i>
-                                        <p>Data Order</p>
+                                        <p>Laporan Pembelian</p>
                                     </a>
                                 </li>
 

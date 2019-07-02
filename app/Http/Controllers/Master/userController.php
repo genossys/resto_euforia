@@ -22,7 +22,6 @@ class userController extends Controller
     {
         $user = User::query()
             ->select('id', 'username', 'email', 'hakAkses', 'noHp')
-            ->where('hakAkses', '!=', 'customer')
             ->get();
 
         return DataTables::of($user)
