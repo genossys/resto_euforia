@@ -13,7 +13,6 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{{asset ('adminlte/css/adminlte.min.css')}}">
     <link rel="stylesheet" href="{{asset ('adminlte/plugins/font-awesome/css/font-awesome.min.css')}}">
-    <link rel="stylesheet" href="{{asset ('adminlte/plugins/jvectormap/jquery-jvectormap-1.2.2.css')}}">
     <link href="{{ asset('/css/bootstrap.min.css') }}" rel="stylesheet" />
     <link href="{{ asset('/css/genosstyle.css') }}" rel="stylesheet" />
 
@@ -132,9 +131,6 @@
     <!-- JS -->
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('/js/jquery.min.js') }}"></script>
-    <script src="{{ asset('/adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('/adminlte/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js') }}"></script>
-    <script src="{{ asset('/adminlte/plugins/jvectormap/jquery-jvectormap-world-mill-en.js') }}"></script>
     <!-- AdminLTE App -->
     <script src="{{asset ('/adminlte/js/adminlte.js')}}"></script>
 
